@@ -37,7 +37,7 @@ class FlightOfferManagerTest {
 
     @Test
     void ShouldFindAllWithFromAndTo() {
-        FlightOffer[] expected = new FlightOffer[]{second, seventh, ninth, tenth};
+        FlightOffer[] expected = new FlightOffer[]{second, seventh,ninth,tenth};
         FlightOffer[] actual = manager.findAll("LED", "ALA");
         assertArrayEquals(expected,actual);
     }
