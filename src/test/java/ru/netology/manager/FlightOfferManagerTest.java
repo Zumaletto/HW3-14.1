@@ -46,8 +46,6 @@ class FlightOfferManagerTest {
         assertArrayEquals(expected,actual);
     }
 
-
-
     @Test
     void ShouldFindAllWithoutFromAndTo() {
         assertArrayEquals(new FlightOffer[]{}, manager.findAll("FRU", "EGO", comparator));
