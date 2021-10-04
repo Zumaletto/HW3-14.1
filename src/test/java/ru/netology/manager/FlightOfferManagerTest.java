@@ -42,7 +42,7 @@ class FlightOfferManagerTest {
     @Test
     void ShouldFindAllWithFromAndTo() {
         FlightOffer[] expected = new FlightOffer[]{tenth, second, seventh, ninth};
-        FlightOffer[] actual = manager.findAll("LED", "ALA", Comparator<FlightOffer>comparator);
+        FlightOffer[] actual = manager.findAll("LED", "ALA", comparator);
         assertArrayEquals(expected,actual);
     }
 
@@ -50,23 +50,23 @@ class FlightOfferManagerTest {
 
     @Test
     void ShouldFindAllWithoutFromAndTo() {
-        assertArrayEquals(new FlightOffer[]{}, manager.findAll("FRU", "EGO", Comparator<FlightOffer>comparator);
+        assertArrayEquals(new FlightOffer[]{}, manager.findAll("FRU", "EGO", comparator));
     }
 
     @Test
     void ShouldFindAllWithoutFromAndWithTo() {
-        assertArrayEquals(new FlightOffer[]{}, manager.findAll("FRU", "DME", Comparator<FlightOffer>comparator);
+        assertArrayEquals(new FlightOffer[]{}, manager.findAll("FRU", "DME", comparator));
     }
 
     @Test
     void ShouldFindAllWitFromAndWithoutTo() {
-        assertArrayEquals(new FlightOffer[]{}, manager.findAll("DME", "EGO", Comparator<FlightOffer>comparator);
+        assertArrayEquals(new FlightOffer[]{}, manager.findAll("DME", "EGO", comparator));
     }
 
 
     @Test
     void ShouldFindAllEmpty() {
-        assertArrayEquals(new FlightOffer[]{}, manager.findAll("", "",Comparator<FlightOffer>comparator);
+        assertArrayEquals(new FlightOffer[]{}, manager.findAll("", "",comparator));
     }
 
 }
